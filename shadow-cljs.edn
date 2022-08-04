@@ -1,0 +1,26 @@
+{:deps {:aliases [:dev]}
+
+ :nrepl {:port 9000
+         :middleware [refactor-nrepl.middleware/wrap-refactor]
+         :init-ns user}
+
+ :builds {:app {:target :browser
+                :modules {:shared {:entries []}
+                          :main {:init-fn app.client-main/init!
+                                 :depends-on #{:shared}
+                                 :preloads [com.fulcrologic.fulcro.inspect.preload
+                                            com.fulcrologic.fulcro.inspect.dom-picker-preload]}}
+
+                :compiler-options {:output-feature-set :es-next
+                                   :infer-externs :auto}
+
+                :js-options {:entry-keys ["module" "browser" "main"]}
+
+                :release {:output-dir "public/js"
+                          :asset-path "/js"}
+
+                :dev {:output-dir "public_dev/js"
+                      :asset-path "/js"}
+
+                :devtools {:after-load app.client-main/refresh!
+                           :repl-pprint true}}}}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head lang="en">
+    <title>Loading ...</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/normalize.css@8.0.1/normalize.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app"></div>
+    <div id="bootstrapping-loader" style="height: 100vh; position: relative;">
+        <div id="bootstrapping-loader-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        </div>
+    </div>
+    <script><%- include('inlined.js') -%></script>
+</body>
+
+</html>
