@@ -225,7 +225,7 @@
                    :flex "none"
                    :gap "8px"}
           (mu/button {:onClick (fn []
-                                 (-> (js/fetch "/CS421-questionnaire-generator/example.yaml")
+                                 (-> (js/fetch "example.yaml")
                                    (.then (fn [res] (.text res)))
                                    (.then (fn [res-text]
                                             (when-let [editor (.-current monaco-editor-ref)]
