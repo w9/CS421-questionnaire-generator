@@ -53,9 +53,6 @@ resources/public/*.png
 docs/_site
 docs/.sass-cache
 docs/Gemfile.lock
-docs/js/[a-fh-su-z]*
-docs/js/goog
-docs/js/garden
 old-docs/.asciidoctor
 old-docs/plumbing.png
 DevelopersGuide.html
